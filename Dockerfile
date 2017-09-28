@@ -5,6 +5,6 @@ LABEL maintainer="siyuangao@gmail.com"
 COPY ./src /app
 
 WORKDIR /app
-RUN pip install -r requirements.txt
-ENTRYPOINT ["python"]
-CMD ["app.py"]
+RUN pip install --no-cache-dir -r requirements.txt
+
+CMD ["python", "app.py"]
